@@ -27,7 +27,10 @@ g = textcompare()
 g.rungensim(docs2)
 g.jaccard(doc1_list,doc2_list)
 ----
-
+- Execute the code
+----
+$python textcompare.py
+----
 * Result1
 ----
 cosine sim  -0.224094
@@ -45,12 +48,17 @@ g = textcompare()
 g.rungensim(docs1)
 g.jaccard(doc1_list,doc2_list)
 ----
+- Execute the code
+----
+$python textcompare.py
+----
 
 * Result2
 ----
 cosine sim  -0.825705
 jaccard 0.6
 ----
+
 
 == Analysis
 
