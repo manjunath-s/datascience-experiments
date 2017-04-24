@@ -3,7 +3,7 @@
 == Description
 
 This experiment is to understand the use of Gensim and run the cosine similarity for shorter text. And also use Jaccard similarity to do comparision of text.
-There was a question on (http://www.quora.com/How-do-I-calculate-Cosine-Similarity-between-tweets) . I was pondering over the need of Cosine and thinking how it will benefit.
+There was a question on http://www.quora.com/How-do-I-calculate-Cosine-Similarity-between-tweets . I was pondering over the need of Cosine and thinking how it will benefit.
 
 == Data & Experiment
 
