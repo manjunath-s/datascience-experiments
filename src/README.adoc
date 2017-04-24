@@ -1,0 +1,66 @@
+= Analysis of Comparing Short Text using Cosine Similarity (word2vec gensim) and Jaccard Similarity
+
+== Description
+
+This experiment is to understand the use of Gensim and run the cosine similarity for shorter text. And also use Jaccard similarity to do comparision of text.
+There was a question on Quora https://www.quora.com/How-do-I-calculate-Cosine-Similarity-between-tweets . I was pondering over the need of Cosine and thinking how it will benefit.
+
+
+== Data & Experiment
+
+
+* Data
+----
+docs1 = ["This is a sentence", "This is another sentence"]
+docs2 = ["11 CRPF personnel killed in naxal attack at Chattisgarh","11 CRPF personnel killed in encounter with Naxal in Chhattisgarh Sukma"]
+----
+
+As you can see docs1 has two sentences and docs2 has two sentences.
+
+* Execute the code1
+- In the main class, use the following code
+
+----
+doc1_list = docs2[0].lower().split(" ")
+doc2_list = docs2[1].lower().split(" ")
+g = textcompare()
+g.rungensim(docs2)
+g.jaccard(doc1_list,doc2_list)
+----
+
+* Result1
+----
+cosine sim  -0.224094
+jaccard 0.46153846153846156
+----
+
+* Execute the code2
+- In the main class, use the following code
+
+----
+doc1_list = docs1[0].lower().split(" ")
+doc2_list = docs1[1].lower().split(" ")
+
+g = textcompare()
+g.rungensim(docs1)
+g.jaccard(doc1_list,doc2_list)
+----
+
+* Result2
+----
+cosine sim  -0.825705
+jaccard 0.6
+----
+
+== Analysis
+
+After running the above sample code it may be noticed that there is negative number for cosine.
+However, for different run of the same code the similarity value changes. This is due to the window size of the vector.
+The Gensim way i.e word2vec is more suitable for large text. For smaller text it is advisable to use something like Jaccard.
+
+== Observation
+
+* It may be observed that removal of stopwords or cleaning of data is not done.
+* However, the exercise here was to understand the purpose of some algorithms and know when to use what.
+* Note, here we are not trying to do semantic similarity as well.
+* Cosine is generally used for larger text like news articles or reports, however the length of the text compared should be equal to get the accurate results.
