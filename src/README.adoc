@@ -3,8 +3,7 @@
 == Description
 
 This experiment is to understand the use of Gensim and run the cosine similarity for shorter text. And also use Jaccard similarity to do comparision of text.
-There was a question on Quora https://www.quora.com/How-do-I-calculate-Cosine-Similarity-between-tweets . I was pondering over the need of Cosine and thinking how it will benefit.
-
+There was a question on (http://www.quora.com/How-do-I-calculate-Cosine-Similarity-between-tweets) . I was pondering over the need of Cosine and thinking how it will benefit.
 
 == Data & Experiment
 
@@ -62,9 +61,12 @@ jaccard 0.6
 
 == Analysis
 
-After running the above sample code it may be noticed that there is negative number for cosine.
-However, for different run of the same code the similarity value changes. This is due to the window size of the vector.
-The Gensim way i.e word2vec is more suitable for large text. For smaller text it is advisable to use something like Jaccard.
+After running the above sample code with two different data points, it may be noticed that there is negative number for cosine.
+However, for different run of the same code the similarity value changes and it is positive and higher as well. This is due to the window size of the vector.
+The Gensim way i.e word2vec is more suitable for large text. Gensim creates vectors with a fixed length is useful for larger text.
+For smaller text it is advisable to use something like Jaccard.
+Though cosine could have been used directly without the Gensim, however creating a vector and doing a comparison would have been an additional overhead.
+
 
 == Observation
 
