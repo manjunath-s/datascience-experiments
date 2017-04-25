@@ -2,7 +2,7 @@
 
 == Problem Description
 
-Suppose we have short text say for example tweets and want to do comparison between the tweets
+Suppose  we have short text say for example tweets and want to do comparison between the tweets
 to find the similarity. There are different similarity measures which could be used to find
 similarity. For example : Cosine, Jaccard . This exercise is to apply , understand and compare
 
