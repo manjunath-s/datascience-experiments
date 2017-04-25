@@ -1,4 +1,6 @@
 from gensim.models import doc2vec
+from gensim.models import KeyedVectors
+import gensim
 from collections import namedtuple
 import math
 from numpy import dot
@@ -26,11 +28,12 @@ class textcompare():
             #print(words)
             tags = [i]
             docs.append(analyzedDocument(words, tags))
-        # Train model (set min_count = 1, if you want the model to work with the provided example data set)
-        model = doc2vec.Doc2Vec(docs, size = 3, window = 30, min_count = 1, workers = 4)
+
+        model = doc2vec.Doc2Vec(docs, size = 3, window = 30, min_count = 2, workers = 4)
         # Get the vectors
         #print(model.docvecs[0])
         #print(model.docvecs[1])
+        print("infer ",model.infer_vector("Chattisgarh, CRPF"))
         #compute cosine
         print("cosine sim ", self.cosine(model.docvecs[0], model.docvecs[1]))
 
@@ -54,9 +57,6 @@ if __name__ == "__main__":
 
     doc1_list = doc1[0].lower().split(" ")
     doc2_list = doc1[1].lower().split(" ")
-    print(doc1_list)
-    print(doc2_list)
-
     g = textcompare()
     g.rungensim(doc1)
-    #g.jaccard(doc1_list,doc2_list)
+    g.jaccard(doc1_list,doc2_list)

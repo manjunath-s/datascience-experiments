@@ -1,9 +1,17 @@
 = Analysis of Comparing Short Text using Cosine Similarity (word2vec gensim) and Jaccard Similarity
 
-== Description
+== Problem Description
 
-This experiment is to understand the use of Gensim and run the cosine similarity for shorter text. And also use Jaccard similarity to do comparision of text.
-There was a question on http://www.quora.com/How-do-I-calculate-Cosine-Similarity-between-tweets . I was pondering over the need of Cosine and thinking how it will benefit.
+Suppose we have short text say for example tweets and want to do comparison between the tweets
+to find the similarity. There are different similarity measures which could be used to find
+similarity. For example : Cosine, Jaccard . This exercise is to apply , understand and compare
+
+1. doc2vec and cosine similarity
+2. Jaccard Similarity
+
+For doc2vec Gensim is used and similarity is calculated using cosine. Jaccard and cosine are implemented.
+
+The goal is to know whether to use doc2vec with cosine or Jaccard.
 
 == Data & Experiment
 
@@ -74,3 +82,4 @@ Though cosine could have been used directly without the Gensim, however creating
 * However, the exercise here was to understand the purpose of some algorithms and know when to use what.
 * Note, here we are not trying to do semantic similarity as well.
 * Cosine is generally used for larger text like news articles or reports, however the length of the text compared should be equal to get the accurate results.
+* Also, in terms of performance the jaccard is performing better with a very minute difference of 2ms.
