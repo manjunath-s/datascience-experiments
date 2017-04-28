@@ -25,8 +25,8 @@ for epoch in range(10):
     model.alpha -= 0.002  # decrease the learning rate`
     model.min_alpha = model.alpha  # fix the learning rate, no decay
 
-model.save("../../data/my_model.doc2vec")
-model_loaded = Doc2Vec.load('my_model.doc2vec')
+model.save("../data/my_model.doc2vec")
+model_loaded = Doc2Vec.load('../data/my_model.doc2vec')
 
 print model.docvecs.most_similar(["SENT_0"])
 print model_loaded.docvecs.most_similar(["SENT_1"])
